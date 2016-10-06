@@ -1,9 +1,12 @@
+const FabricPlugin = require('./FabricPlugin');
 
-class FabricAnswers {
-    constructor() {}
+class FabricAnswers extends FabricPlugin {
+    constructor() {
+      super();
+    }
 
     sendPurchase(itemPrice, currency, success, itemName, itemType, itemId, attributes) {
-        window.fabric.core.execPlugin('sendPurchase', [
+        this.execPlugin('sendPurchase', [
             itemPrice,
             currency,
             success,
@@ -15,7 +18,7 @@ class FabricAnswers {
     }
 
     sendAddToCart(itemPrice, currency, itemName, itemType, itemId, attributes) {
-        window.fabric.core.execPlugin('sendAddToCart', [
+        this.execPlugin('sendAddToCart', [
             itemPrice,
             currency,
             itemName,
@@ -26,7 +29,7 @@ class FabricAnswers {
     }
 
     sendStartCheckout(totalPrice, currency, itemCount, attributes) {
-        window.fabric.core.execPlugin('sendStartCheckout', [
+        this.execPlugin('sendStartCheckout', [
             totalPrice,
             currency,
             itemCount,
@@ -35,14 +38,14 @@ class FabricAnswers {
     }
 
     sendSearch(query, attributes) {
-        window.fabric.core.execPlugin('sendSearch', [
+        this.execPlugin('sendSearch', [
             query,
             attributes
         ]);
     }
 
     sendShare(method, contentName, contentType, contentId, attributes) {
-        window.fabric.core.execPlugin('sendShare', [
+        this.execPlugin('sendShare', [
             method,
             contentName,
             contentType,
@@ -52,7 +55,7 @@ class FabricAnswers {
     }
 
     sendRatedContent(rating, contentName, contentType, contentId, attributes) {
-        window.fabric.core.execPlugin('sendRatedContent', [
+        this.execPlugin('sendRatedContent', [
             rating,
             contentName,
             contentType,
@@ -62,7 +65,7 @@ class FabricAnswers {
     }
 
     sendSignUp(method, success, attributes) {
-        window.fabric.core.execPlugin('sendSignUp', [
+        this.execPlugin('sendSignUp', [
             method,
             success,
             attributes
@@ -70,7 +73,7 @@ class FabricAnswers {
     }
 
     sendLogIn(method, success, attributes) {
-        window.fabric.core.execPlugin('sendLogIn', [
+        this.execPlugin('sendLogIn', [
             method,
             success,
             attributes
@@ -78,21 +81,21 @@ class FabricAnswers {
     }
 
     sendInvite(method, attributes) {
-        window.fabric.core.execPlugin('sendInvite', [
+        this.execPlugin('sendInvite', [
             method,
             attributes
         ]);
     }
 
     sendLevelStart(levelName, attributes) {
-        window.fabric.core.execPlugin('sendLevelStart', [
+        this.execPlugin('sendLevelStart', [
             levelName,
             attributes
         ]);
     }
 
     sendLevelEnd(levelName, score, success, attributes) {
-        window.fabric.core.execPlugin('sendLevelEnd', [
+        this.execPlugin('sendLevelEnd', [
             levelName,
             score,
             success,
@@ -101,7 +104,7 @@ class FabricAnswers {
     }
 
     sendContentView(name, type, id, attributes) {
-        window.fabric.core.execPlugin('sendContentView', [
+        this.execPlugin('sendContentView', [
             name,
             type,
             id,
@@ -110,7 +113,7 @@ class FabricAnswers {
     }
 
     sendScreenView(name, id, attributes) {
-        window.fabric.core.execPlugin('sendContentView', [
+        this.execPlugin('sendContentView', [
             name,
             "Screen",
             id,
@@ -119,7 +122,7 @@ class FabricAnswers {
     }
 
     sendCustomEvent(name, attributes) {
-        window.fabric.core.execPlugin('sendCustomEvent', [
+        this.execPlugin('sendCustomEvent', [
             name,
             attributes
         ]);

@@ -14,15 +14,15 @@
     <hook type="before_plugin_uninstall" src="hooks/before_plugin_uninstall.js" />
 
     <js-module name="FabricPlugin" src="www/FabricPlugin.js">
-        <clobbers target="window.fabric.core"/>
+        <clobbers target="Fabric-core"/>
     </js-module>
 
     <js-module name="FabricAnswersPlugin" src="www/FabricPlugin.Answers.js">
-        <clobbers target="window.fabric.Answers"/>
+        <clobbers target="FabricAnswers"/>
     </js-module>
 
     <js-module name="FabricCrashlyticsPlugin" src="www/FabricPlugin.Crashlytics.js">
-        <clobbers target="window.fabric.Crashlytics"/>
+        <clobbers target="FabricCrashlytics"/>
     </js-module>
 
     <!-- android -->

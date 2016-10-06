@@ -13,4 +13,4 @@ class FabricPlugin {
 
 }
 
-module.exports = new FabricPlugin();
+module.exports = FabricPlugin;

@@ -26,4 +26,4 @@ var FabricPlugin = (function () {
     return FabricPlugin;
 })();
 
-module.exports = new FabricPlugin();
+module.exports = FabricPlugin;
