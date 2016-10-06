@@ -272,4 +272,4 @@ declare module FabricPlugin {
     }
 }
 
-declare var fabric: FabricPlugin.FabricPluginStatic;
+declare var fabricPlugin: FabricPlugin.FabricPluginStatic;

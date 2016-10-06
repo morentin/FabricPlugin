@@ -1,97 +1,97 @@
 /// <reference path="cordova-fabric-plugin.d.ts" />
 
-var fabricApi: FabricPlugin.FabricPluginStatic = fabric;
-var answersApi: FabricPlugin.Answers = fabric.Answers;
-var crashlyticsApi: FabricPlugin.Crashlytics = fabric.Crashlytics;
+var fabricApi: FabricPlugin.FabricPluginStatic = fabricPlugin;
+var answersApi: FabricPlugin.Answers = fabricPlugin.Answers;
+var crashlyticsApi: FabricPlugin.Crashlytics = fabricPlugin.Crashlytics;
 
-fabric.Crashlytics.addLog("Message");
+fabricPlugin.Crashlytics.addLog("Message");
 
-fabric.Crashlytics.sendCrash();
+fabricPlugin.Crashlytics.sendCrash();
 
-fabric.Crashlytics.sendNonFatalCrash("Error");
+fabricPlugin.Crashlytics.sendNonFatalCrash("Error");
 
-fabric.Crashlytics.recordError("Error", -1);
+fabricPlugin.Crashlytics.recordError("Error", -1);
 
-fabric.Crashlytics.setUserIdentifier("123");
+fabricPlugin.Crashlytics.setUserIdentifier("123");
 
-fabric.Crashlytics.setUserName("bob");
+fabricPlugin.Crashlytics.setUserName("bob");
 
-fabric.Crashlytics.setUserEmail("bob@email.com");
+fabricPlugin.Crashlytics.setUserEmail("bob@email.com");
 
-fabric.Crashlytics.setStringValueForKey("value", "key");
+fabricPlugin.Crashlytics.setStringValueForKey("value", "key");
 
-fabric.Crashlytics.setIntValueForKey(1, "key");
+fabricPlugin.Crashlytics.setIntValueForKey(1, "key");
 
-fabric.Crashlytics.setBoolValueForKey(true, "key");
+fabricPlugin.Crashlytics.setBoolValueForKey(true, "key");
 
-fabric.Crashlytics.setFloatValueForKey(1.1, "key");
+fabricPlugin.Crashlytics.setFloatValueForKey(1.1, "key");
 
-fabric.Answers.sendPurchase();
-fabric.Answers.sendPurchase(24.95);
-fabric.Answers.sendPurchase(24.95, "USD");
-fabric.Answers.sendPurchase(24.95, "USD", true);
-fabric.Answers.sendPurchase(24.95, "USD", true, "Foo Bar Shirt");
-fabric.Answers.sendPurchase(24.95, "USD", true, "Foo Bar Shirt", "apparel");
-fabric.Answers.sendPurchase(24.95, "USD", true, "Foo Bar Shirt", "apparel", "123");
-fabric.Answers.sendPurchase(24.95, "USD", true, "Foo Bar Shirt", "apparel", "123", { "key": "value" });
+fabricPlugin.Answers.sendPurchase();
+fabricPlugin.Answers.sendPurchase(24.95);
+fabricPlugin.Answers.sendPurchase(24.95, "USD");
+fabricPlugin.Answers.sendPurchase(24.95, "USD", true);
+fabricPlugin.Answers.sendPurchase(24.95, "USD", true, "Foo Bar Shirt");
+fabricPlugin.Answers.sendPurchase(24.95, "USD", true, "Foo Bar Shirt", "apparel");
+fabricPlugin.Answers.sendPurchase(24.95, "USD", true, "Foo Bar Shirt", "apparel", "123");
+fabricPlugin.Answers.sendPurchase(24.95, "USD", true, "Foo Bar Shirt", "apparel", "123", { "key": "value" });
 
-fabric.Answers.sendAddToCart();
-fabric.Answers.sendAddToCart(24.95);
-fabric.Answers.sendAddToCart(24.95, "USD");
-fabric.Answers.sendAddToCart(24.95, "USD", "Foo Bar Shirt");
-fabric.Answers.sendAddToCart(24.95, "USD", "Foo Bar Shirt", "apparel");
-fabric.Answers.sendAddToCart(24.95, "USD", "Foo Bar Shirt", "apparel", "123");
-fabric.Answers.sendAddToCart(24.95, "USD", "Foo Bar Shirt", "apparel", "123", { "key": "value" });
+fabricPlugin.Answers.sendAddToCart();
+fabricPlugin.Answers.sendAddToCart(24.95);
+fabricPlugin.Answers.sendAddToCart(24.95, "USD");
+fabricPlugin.Answers.sendAddToCart(24.95, "USD", "Foo Bar Shirt");
+fabricPlugin.Answers.sendAddToCart(24.95, "USD", "Foo Bar Shirt", "apparel");
+fabricPlugin.Answers.sendAddToCart(24.95, "USD", "Foo Bar Shirt", "apparel", "123");
+fabricPlugin.Answers.sendAddToCart(24.95, "USD", "Foo Bar Shirt", "apparel", "123", { "key": "value" });
 
-fabric.Answers.sendStartCheckout();
-fabric.Answers.sendStartCheckout(24.95);
-fabric.Answers.sendStartCheckout(24.95, "USD", 2);
-fabric.Answers.sendStartCheckout(24.95, "USD", 2, { "key": "value" });
+fabricPlugin.Answers.sendStartCheckout();
+fabricPlugin.Answers.sendStartCheckout(24.95);
+fabricPlugin.Answers.sendStartCheckout(24.95, "USD", 2);
+fabricPlugin.Answers.sendStartCheckout(24.95, "USD", 2, { "key": "value" });
 
-fabric.Answers.sendSearch("query");
-fabric.Answers.sendSearch("query", { "key": "value" });
+fabricPlugin.Answers.sendSearch("query");
+fabricPlugin.Answers.sendSearch("query", { "key": "value" });
 
-fabric.Answers.sendShare();
-fabric.Answers.sendShare("Facebook");
-fabric.Answers.sendShare("Facebook", "Foo Bar Shirt");
-fabric.Answers.sendShare("Facebook", "Foo Bar Shirt", "apparel");
-fabric.Answers.sendShare("Facebook", "Foo Bar Shirt", "apparel", "123");
-fabric.Answers.sendShare("Facebook", "Foo Bar Shirt", "apparel", "123", { "key": "value" });
+fabricPlugin.Answers.sendShare();
+fabricPlugin.Answers.sendShare("Facebook");
+fabricPlugin.Answers.sendShare("Facebook", "Foo Bar Shirt");
+fabricPlugin.Answers.sendShare("Facebook", "Foo Bar Shirt", "apparel");
+fabricPlugin.Answers.sendShare("Facebook", "Foo Bar Shirt", "apparel", "123");
+fabricPlugin.Answers.sendShare("Facebook", "Foo Bar Shirt", "apparel", "123", { "key": "value" });
 
-fabric.Answers.sendRatedContent();
-fabric.Answers.sendRatedContent(5);
-fabric.Answers.sendRatedContent(5, "Foo Bar Shirt");
-fabric.Answers.sendRatedContent(5, "Foo Bar Shirt", "apparel");
-fabric.Answers.sendRatedContent(5, "Foo Bar Shirt", "apparel", "123", { "key": "value" });
+fabricPlugin.Answers.sendRatedContent();
+fabricPlugin.Answers.sendRatedContent(5);
+fabricPlugin.Answers.sendRatedContent(5, "Foo Bar Shirt");
+fabricPlugin.Answers.sendRatedContent(5, "Foo Bar Shirt", "apparel");
+fabricPlugin.Answers.sendRatedContent(5, "Foo Bar Shirt", "apparel", "123", { "key": "value" });
 
-fabric.Answers.sendSignUp();
-fabric.Answers.sendSignUp("Facebook");
-fabric.Answers.sendSignUp("Facebook", true);
-fabric.Answers.sendSignUp("Facebook", true, { "key": "value" });
+fabricPlugin.Answers.sendSignUp();
+fabricPlugin.Answers.sendSignUp("Facebook");
+fabricPlugin.Answers.sendSignUp("Facebook", true);
+fabricPlugin.Answers.sendSignUp("Facebook", true, { "key": "value" });
 
-fabric.Answers.sendLogIn();
-fabric.Answers.sendLogIn("Facebook");
-fabric.Answers.sendLogIn("Facebook", true);
-fabric.Answers.sendLogIn("Facebook", true, { "key": "value" });
+fabricPlugin.Answers.sendLogIn();
+fabricPlugin.Answers.sendLogIn("Facebook");
+fabricPlugin.Answers.sendLogIn("Facebook", true);
+fabricPlugin.Answers.sendLogIn("Facebook", true, { "key": "value" });
 
-fabric.Answers.sendInvite();
-fabric.Answers.sendInvite("Facebook");
-fabric.Answers.sendInvite("Facebook", { "key": "value" });
+fabricPlugin.Answers.sendInvite();
+fabricPlugin.Answers.sendInvite("Facebook");
+fabricPlugin.Answers.sendInvite("Facebook", { "key": "value" });
 
-fabric.Answers.sendLevelStart();
-fabric.Answers.sendLevelStart("Chemical Plant Zone - Act 1");
-fabric.Answers.sendLevelStart("Chemical Plant Zone - Act 1", { "key": "value" });
+fabricPlugin.Answers.sendLevelStart();
+fabricPlugin.Answers.sendLevelStart("Chemical Plant Zone - Act 1");
+fabricPlugin.Answers.sendLevelStart("Chemical Plant Zone - Act 1", { "key": "value" });
 
-fabric.Answers.sendLevelEnd();
-fabric.Answers.sendLevelEnd("Brinstar");
-fabric.Answers.sendLevelEnd("Brinstar", 9000);
-fabric.Answers.sendLevelEnd("Brinstar", 9000, true);
-fabric.Answers.sendLevelEnd("Brinstar", 9000, true, { "key": "value" });
+fabricPlugin.Answers.sendLevelEnd();
+fabricPlugin.Answers.sendLevelEnd("Brinstar");
+fabricPlugin.Answers.sendLevelEnd("Brinstar", 9000);
+fabricPlugin.Answers.sendLevelEnd("Brinstar", 9000, true);
+fabricPlugin.Answers.sendLevelEnd("Brinstar", 9000, true, { "key": "value" });
 
-fabric.Answers.sendContentView("Home");
-fabric.Answers.sendContentView("Home", "Page");
-fabric.Answers.sendContentView("Home", "Page", "123");
-fabric.Answers.sendContentView("Home", "Page", "123", { "key": "value" });
+fabricPlugin.Answers.sendContentView("Home");
+fabricPlugin.Answers.sendContentView("Home", "Page");
+fabricPlugin.Answers.sendContentView("Home", "Page", "123");
+fabricPlugin.Answers.sendContentView("Home", "Page", "123", { "key": "value" });
 
-fabric.Answers.sendCustomEvent("My Event");
-fabric.Answers.sendCustomEvent("My Event", { "key": "value" });
+fabricPlugin.Answers.sendCustomEvent("My Event");
+fabricPlugin.Answers.sendCustomEvent("My Event", { "key": "value" });
